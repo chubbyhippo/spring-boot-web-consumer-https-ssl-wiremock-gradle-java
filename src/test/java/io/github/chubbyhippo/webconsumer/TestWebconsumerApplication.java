@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.TestConfiguration;
 public class TestWebconsumerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.from(WebconsumerApplication::main).with(TestWebconsumerApplication.class).run(args);
+		SpringApplication.from(WebConsumerApplication::main).with(TestWebconsumerApplication.class).run(args);
 	}
 
 }
