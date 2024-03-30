@@ -1,0 +1,11 @@
+spring:
+  ssl:
+    bundle:
+      jks:
+        wiremock:
+          key:
+            alias: "wiremock"
+          keystore:
+            location: "classpath:wiremock.p12"
+            password: "password"
+            type: "PKCS12"
