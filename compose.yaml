@@ -1,1 +1,13 @@
 services:
+  wiremock-ssl-p12:
+    image: wiremock/wiremock
+    volumes:
+      - ./wiremock:/home/wiremock
+      - ./src/main/resources/wiremock.p12:/home/wiremock/wiremock.p12
+    command: [ "--https-port", "9443",
+               "--disable-http",
+               "--https-keystore", "/home/wiremock/wiremock.p12",
+               "--keystore-type", "PKCS12",
+               "--verbose" ]
+    ports:
+      - "9443:9443"
