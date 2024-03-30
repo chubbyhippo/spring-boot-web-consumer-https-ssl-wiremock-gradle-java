@@ -2,7 +2,7 @@ spring:
   ssl:
     bundle:
       jks:
-        wiremock:
+        my-bundle:
           truststore:
             location: "classpath:wiremock.p12"
             password: "password"
