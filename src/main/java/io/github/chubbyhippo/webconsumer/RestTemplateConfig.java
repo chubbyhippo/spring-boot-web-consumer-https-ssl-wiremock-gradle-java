@@ -12,7 +12,7 @@ public class RestTemplateConfig {
 
     @Bean
     RestTemplate restTemplate(RestTemplateBuilder builder, SslBundles sslBundles) {
-        SslBundle sslBundle = sslBundles.getBundle("wiremock");
+        SslBundle sslBundle = sslBundles.getBundle("my-bundle");
         return builder.rootUri("https://localhost:9443").setSslBundle(sslBundle).build();
     }
 }
