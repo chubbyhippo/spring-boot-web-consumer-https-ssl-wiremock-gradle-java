@@ -3,9 +3,6 @@ spring:
     bundle:
       jks:
         wiremock:
-          key:
-            alias: "wiremock"
-          keystore:
+          truststore:
             location: "classpath:wiremock.p12"
             password: "password"
-            type: "PKCS12"
