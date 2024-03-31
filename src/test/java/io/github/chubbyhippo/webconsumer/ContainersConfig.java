@@ -13,11 +13,14 @@ public class ContainersConfig {
 
     @Bean
     ComposeContainer composeContainer(DynamicPropertyRegistry registry) {
+
         var compose = new ComposeContainer(new File("compose.yaml"))
                 .withExposedService("wiremock-1",
                         9443,
                         Wait.forListeningPort())
                 .withLocalCompose(true);
+
+        registry.add("hello.host", () -> compose.getServiceHost("wiremock-1", 9443));
         registry.add("hello.port", () -> compose.getServicePort("wiremock-1", 9443));
 
         return compose;
