@@ -8,6 +8,7 @@ public class TestWebConsumerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.from(WebConsumerApplication::main)
+				.with(TestWebConsumerApplication.class)
 				.with(ContainersConfig.class)
 				.run(args);
 	}
