@@ -7,4 +7,5 @@ spring:
             location: "classpath:wiremock.p12"
             password: "password"
 hello:
+  host: localhost
   port: 9443
