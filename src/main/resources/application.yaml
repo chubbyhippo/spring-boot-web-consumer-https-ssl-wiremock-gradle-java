@@ -6,3 +6,5 @@ spring:
           truststore:
             location: "classpath:wiremock.p12"
             password: "password"
+hello:
+  port: 9443
