@@ -4,10 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.test.context.TestConfiguration;
 
 @TestConfiguration(proxyBeanMethods = false)
-public class TestWebconsumerApplication {
+public class TestWebConsumerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.from(WebConsumerApplication::main).with(TestWebconsumerApplication.class).run(args);
+		SpringApplication.from(WebConsumerApplication::main)
+				.with(ContainersConfig.class)
+				.run(args);
 	}
 
 }
