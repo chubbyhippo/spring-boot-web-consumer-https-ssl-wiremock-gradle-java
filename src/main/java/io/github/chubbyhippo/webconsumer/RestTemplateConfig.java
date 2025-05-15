@@ -22,6 +22,6 @@ public class RestTemplateConfig {
     RestTemplate restTemplate(RestTemplateBuilder builder, SslBundles sslBundles) {
         SslBundle sslBundle = sslBundles.getBundle("my-bundle");
 
-        return builder.rootUri("https://" + host + ":" + port).setSslBundle(sslBundle).build();
+        return builder.rootUri("https://" + host + ":" + port).sslBundle(sslBundle).build();
     }
 }
