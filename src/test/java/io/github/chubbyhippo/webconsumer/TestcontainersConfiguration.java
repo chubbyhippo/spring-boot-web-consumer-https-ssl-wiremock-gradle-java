@@ -10,7 +10,7 @@ import org.testcontainers.containers.wait.strategy.Wait;
 import java.io.File;
 
 @TestConfiguration(proxyBeanMethods = false)
-public class ContainersConfig {
+public class TestcontainersConfiguration {
 
     @Bean
     @ServiceConnection
