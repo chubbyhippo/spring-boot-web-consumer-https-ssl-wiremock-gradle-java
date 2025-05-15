@@ -11,7 +11,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Import(TestcontainersConfiguration.class)
 @Testcontainers(disabledWithoutDocker = true)
-class WebConsumerApplicationTests {
+class WebTestClientWebConsumerApplicationTests {
 
     @Test
     @DisplayName("should get hello when call hello")
