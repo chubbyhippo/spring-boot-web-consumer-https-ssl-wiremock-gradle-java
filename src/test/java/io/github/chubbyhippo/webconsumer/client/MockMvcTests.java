@@ -1,5 +1,6 @@
-package io.github.chubbyhippo.webconsumer;
+package io.github.chubbyhippo.webconsumer.client;
 
+import io.github.chubbyhippo.webconsumer.TestcontainersConfiguration;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
