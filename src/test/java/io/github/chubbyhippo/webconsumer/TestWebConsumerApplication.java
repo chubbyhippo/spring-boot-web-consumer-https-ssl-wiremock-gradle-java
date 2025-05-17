@@ -1,7 +1,5 @@
-package io.github.chubbyhippo.webconsumer.client;
+package io.github.chubbyhippo.webconsumer;
 
-import io.github.chubbyhippo.webconsumer.TestcontainersConfiguration;
-import io.github.chubbyhippo.webconsumer.WebConsumerApplication;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.test.context.TestConfiguration;
 
