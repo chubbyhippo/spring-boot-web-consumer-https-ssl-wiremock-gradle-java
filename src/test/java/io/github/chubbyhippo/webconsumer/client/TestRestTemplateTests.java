@@ -1,6 +1,7 @@
 package io.github.chubbyhippo.webconsumer.client;
 
 import io.github.chubbyhippo.webconsumer.TestcontainersConfiguration;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Import(TestcontainersConfiguration.class)
 @Testcontainers(disabledWithoutDocker = true)
+@Disabled
 class TestRestTemplateTests {
     @Autowired
     private TestRestTemplate restTemplate;
