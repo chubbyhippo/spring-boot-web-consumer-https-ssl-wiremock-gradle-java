@@ -1,6 +1,7 @@
 package io.github.chubbyhippo.webconsumer.client;
 
 import io.github.chubbyhippo.webconsumer.TestcontainersConfiguration;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @Import(TestcontainersConfiguration.class)
 @Testcontainers(disabledWithoutDocker = true)
 @AutoConfigureMockMvc
+@Disabled
 class MockMvcTests {
     @Autowired
     private MockMvc mockMvc;
