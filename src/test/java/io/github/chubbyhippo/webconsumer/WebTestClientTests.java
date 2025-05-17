@@ -13,9 +13,12 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 @Testcontainers(disabledWithoutDocker = true)
 class WebTestClientTests {
 
+    @Autowired
+    private WebTestClient webTestClient;
+
     @Test
     @DisplayName("should get hello when call hello")
-    void shouldGetHelloWhenCallHello(@Autowired WebTestClient webTestClient) {
+    void shouldGetHelloWhenCallHello() {
         webTestClient.get()
                 .uri(uriBuilder -> uriBuilder.path("/hello").build())
                 .exchange()
